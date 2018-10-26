@@ -49,6 +49,7 @@
             this.Nev.Name = "Nev";
             this.Nev.Size = new System.Drawing.Size(100, 20);
             this.Nev.TabIndex = 0;
+            this.Nev.TextChanged += new System.EventHandler(this.Nev_TextChanged);
             // 
             // Szuldatum
             // 
@@ -56,6 +57,7 @@
             this.Szuldatum.Name = "Szuldatum";
             this.Szuldatum.Size = new System.Drawing.Size(100, 20);
             this.Szuldatum.TabIndex = 1;
+            this.Szuldatum.TextChanged += new System.EventHandler(this.Szuldatum_TextChanged);
             // 
             // Ferfi
             // 
@@ -67,6 +69,7 @@
             this.Ferfi.TabStop = true;
             this.Ferfi.Text = "F";
             this.Ferfi.UseVisualStyleBackColor = true;
+            this.Ferfi.CheckedChanged += new System.EventHandler(this.Ferfi_CheckedChanged);
             // 
             // No
             // 
@@ -78,6 +81,7 @@
             this.No.TabStop = true;
             this.No.Text = "N";
             this.No.UseVisualStyleBackColor = true;
+            this.No.CheckedChanged += new System.EventHandler(this.No_CheckedChanged);
             // 
             // NevLab
             // 
@@ -109,10 +113,15 @@
             // Hobbik
             // 
             this.Hobbik.FormattingEnabled = true;
+            this.Hobbik.Items.AddRange(new object[] {
+            "Focizás",
+            "Uszás",
+            "Golfozás"});
             this.Hobbik.Location = new System.Drawing.Point(198, 29);
             this.Hobbik.Name = "Hobbik";
             this.Hobbik.Size = new System.Drawing.Size(79, 82);
             this.Hobbik.TabIndex = 7;
+            this.Hobbik.SelectedIndexChanged += new System.EventHandler(this.Hobbik_SelectedIndexChanged);
             // 
             // HobbiPlus
             // 
@@ -129,6 +138,7 @@
             this.Hobbi.Name = "Hobbi";
             this.Hobbi.Size = new System.Drawing.Size(100, 20);
             this.Hobbi.TabIndex = 9;
+            this.Hobbi.TextChanged += new System.EventHandler(this.Hobbi_TextChanged);
             // 
             // HozzaAd
             // 
@@ -138,6 +148,7 @@
             this.HozzaAd.TabIndex = 10;
             this.HozzaAd.Text = "Hozzáad";
             this.HozzaAd.UseVisualStyleBackColor = true;
+            this.HozzaAd.Click += new System.EventHandler(this.HozzaAd_Click);
             // 
             // Betoltes
             // 
@@ -147,6 +158,7 @@
             this.Betoltes.TabIndex = 11;
             this.Betoltes.Text = "Betöltés";
             this.Betoltes.UseVisualStyleBackColor = true;
+            this.Betoltes.Click += new System.EventHandler(this.Betoltes_Click);
             // 
             // Mentes
             // 
@@ -156,12 +168,13 @@
             this.Mentes.TabIndex = 12;
             this.Mentes.Text = "Mentés";
             this.Mentes.UseVisualStyleBackColor = true;
+            this.Mentes.Click += new System.EventHandler(this.Mentes_Click);
             // 
             // Keret
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 227);
+            this.ClientSize = new System.Drawing.Size(285, 144);
             this.Controls.Add(this.Mentes);
             this.Controls.Add(this.Betoltes);
             this.Controls.Add(this.HozzaAd);
@@ -179,6 +192,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Keret";
             this.Text = "Regisztráció";
+            this.Load += new System.EventHandler(this.Keret_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
